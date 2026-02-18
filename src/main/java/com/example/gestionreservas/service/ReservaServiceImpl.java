@@ -32,13 +32,11 @@ public class ReservaServiceImpl implements ReservaService {
 
 	@Override
 	public Optional<Reserva> findByPlayer(String id) {
-		// TODO Auto-generated method stub
 		return Optional.empty();
 	}
 
 	@Override
 	public Optional<Reserva> findByGame(String id) {
-		// TODO Auto-generated method stub
 		return Optional.empty();
 	}
 
