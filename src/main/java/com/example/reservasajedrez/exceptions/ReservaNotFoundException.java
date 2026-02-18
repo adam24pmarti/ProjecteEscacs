@@ -1,4 +1,4 @@
-package com.example.gestionreservas.exceptions;
+package com.example.reservasajedrez.exceptions;
 
 public class ReservaNotFoundException extends RuntimeException{
 	private static final long serialVersionUID = 1L;

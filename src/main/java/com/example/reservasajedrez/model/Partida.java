@@ -1,4 +1,4 @@
-package com.example.gestionreservas.model;
+package com.example.reservasajedrez.model;
 
 import java.util.Objects;
 import org.springframework.data.annotation.Id;

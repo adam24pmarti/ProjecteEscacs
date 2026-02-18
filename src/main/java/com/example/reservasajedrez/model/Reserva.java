@@ -1,4 +1,4 @@
-package com.example.gestionreservas.model;
+package com.example.reservasajedrez.model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

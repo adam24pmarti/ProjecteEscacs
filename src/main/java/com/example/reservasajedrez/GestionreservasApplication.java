@@ -1,4 +1,4 @@
-package com.example.gestionreservas;
+package com.example.reservasajedrez;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

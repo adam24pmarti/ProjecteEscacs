@@ -1,4 +1,4 @@
-package com.example.gestionreservas.controller;
+package com.example.reservasajedrez.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.function.EntityResponse;
 
-import com.example.gestionreservas.model.Reserva;
-import com.example.gestionreservas.service.ReservaService;
+import com.example.reservasajedrez.model.Reserva;
+import com.example.reservasajedrez.service.ReservaService;
 
 @RestController
 @RequestMapping("api/reservas")

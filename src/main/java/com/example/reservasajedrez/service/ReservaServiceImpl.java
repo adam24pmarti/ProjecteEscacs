@@ -1,12 +1,12 @@
-package com.example.gestionreservas.service;
+package com.example.reservasajedrez.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.gestionreservas.model.Reserva;
-import com.example.gestionreservas.repository.ReservaRepository;
+import com.example.reservasajedrez.model.Reserva;
+import com.example.reservasajedrez.repository.ReservaRepository;
 
 @Service("reservaServiceImpl")
 public class ReservaServiceImpl implements ReservaService {
