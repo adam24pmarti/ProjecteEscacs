@@ -21,7 +21,7 @@ public class ReservaServiceImpl implements ReservaService {
 	@Override
 	public boolean create(Reserva reserva) {
 		boolean creado = false;
-		// CREAR NUEVA RESERVA
+		// CREAR NUEVA RESERVA (DTO)
 		return creado;
 	}
 
