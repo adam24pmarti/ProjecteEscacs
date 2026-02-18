@@ -6,10 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.reservasajedrez.exception.PartidaException;
 import com.example.reservasajedrez.model.Partida;
 import com.example.reservasajedrez.service.PartidaService;
 
@@ -25,11 +28,12 @@ public class PartidaController {
 		this.partidaService = partidaService;
 	}
 	
+	@PostMapping
 	public ResponseEntity<Partida> create(@RequestBody Partida partida){
 		try {
 			partidaService.createPartida(partida);
 		} catch (Exception e) {
-
+			throw new PartidaException("No s'ha pogut crear la partida");
 		}
 		return new ResponseEntity<Partida>(partida, HttpStatus.CREATED);
 	}
@@ -40,17 +44,17 @@ public class PartidaController {
 	}
 	
 	@GetMapping("/cercaperid")
-	public List<Partida> getPartidesJugador(String jugadorId){
+	public List<Partida> getPartidesJugador(@RequestParam String jugadorId){
 		return partidaService.getPartidesPerJugador(jugadorId);
 	}
 	
 	@GetMapping("/cercaguanyades")
-	public List<Partida> getPartidesGuanyadesJugador(String jugadorId){
+	public List<Partida> getPartidesGuanyadesJugador(@RequestParam String jugadorId){
 		return partidaService.getPartidesGuanyadesJugador(jugadorId);
 	}
 	
 	@GetMapping("/cercaperdudes")
-	public List<Partida> getPartidesPerdudesJugador(String jugadorId){
+	public List<Partida> getPartidesPerdudesJugador(@RequestParam String jugadorId){
 		return partidaService.getPartidesPerdudesJugador(jugadorId);
 	}
 	
