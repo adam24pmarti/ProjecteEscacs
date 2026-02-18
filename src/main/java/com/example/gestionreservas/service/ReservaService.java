@@ -6,7 +6,7 @@ import java.util.Optional;
 import com.example.gestionreservas.model.Reserva;
 
 public interface ReservaService {
-	public boolean create(Reserva reserva);
+	public Reserva create(Reserva reserva);
 	public Optional<Reserva> findById(String id); // ID de la reserva
 	public Optional<Reserva> findByPlayer(String id); // ID del jugador
 	public Optional<Reserva> findByGame(String id); // ID de la partida
