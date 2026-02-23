@@ -14,8 +14,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.exemple.usuaris_sol.model.UserLogin.Role;
-import com.exemple.usuaris_sol.security.JwtAuthenticationFilter;
+import com.example.reservasajedrez.model.JugadorLogin.Role;
+import com.example.reservasajedrez.security.JwtAuthenticationFilter;
 
 @Configuration
 @EnableMethodSecurity
