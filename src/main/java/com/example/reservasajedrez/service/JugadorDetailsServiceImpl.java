@@ -4,21 +4,22 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.exemple.usuaris_sol.model.UserLogin;
-import com.exemple.usuaris_sol.repository.UserLoginRepository;
+import com.example.reservasajedrez.model.JugadorLogin;
+import com.example.reservasajedrez.repository.JugadorLoginRepository;
 
 @Service
-public class JugadorDetailsServiceImpl {
+public class JugadorDetailsServiceImpl implements UserDetailsService{
 	
 	   @Autowired
-	   private UserLoginRepository repo;
+	   private JugadorLoginRepository repo;
 	   @Override
 	   public UserDetails loadUserByUsername(String username)
 	           throws UsernameNotFoundException {
-	       UserLogin user = repo.findByUsername(username)
+	       JugadorLogin user = repo.findByUsername(username)
 	               .orElseThrow(() ->
 	                       new UsernameNotFoundException("Usuari no trobat"));
 	       return new org.springframework.security.core.userdetails.User(
