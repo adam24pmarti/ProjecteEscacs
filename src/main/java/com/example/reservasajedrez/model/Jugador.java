@@ -64,7 +64,7 @@ public class Jugador {
 	public String getPassword() {
 		return password;
 	}
-	public void setPasword(String password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 	public String getEmail() {
