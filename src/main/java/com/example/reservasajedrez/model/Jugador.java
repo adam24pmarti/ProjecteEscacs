@@ -4,7 +4,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Document(collection = "jugadors")
+@Schema(description = "Entity representing a chess player in the system")
 public class Jugador {
 	@Id
 	private String id;

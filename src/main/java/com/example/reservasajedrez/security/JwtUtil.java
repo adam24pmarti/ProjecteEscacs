@@ -5,12 +5,14 @@ import java.util.Date;
 import javax.crypto.SecretKey;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import com.exemple.usuaris_sol.model.UserLogin.Role;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
+@Components
 public class JwtUtil {
 	
 	@Value("${jwt.secret}")
