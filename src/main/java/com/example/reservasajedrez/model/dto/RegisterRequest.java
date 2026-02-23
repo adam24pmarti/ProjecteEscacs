@@ -1,4 +1,4 @@
-package com.example.reservasajedrez.dto;
+package com.example.reservasajedrez.model.dto;
 
 public class RegisterRequest {
 	private String username;
