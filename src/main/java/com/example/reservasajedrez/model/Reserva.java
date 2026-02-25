@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Reserva {
 	@Id
 	private String id;
-	private String mesa;
+	private Mesa mesa;
 	private LocalTime hora; // HH:MM
 	private LocalDate fecha; // AAAA-MM-DD
 	private Jugador jugador;
@@ -18,7 +18,7 @@ public class Reserva {
 	
 	public Reserva() {}
 	
-	public Reserva(String mesa, String horaTexto, String fechaTexto) {
+	public Reserva(Mesa mesa, String horaTexto, String fechaTexto) {
 		super();
 		this.mesa = mesa;
 		this.hora = convertirStringAHora(horaTexto);
@@ -50,6 +50,11 @@ public class Reserva {
 		}
 		return hora;
 	}
+	
+	private boolean comprobarMesa(Mesa mesa) {
+		boolean disponible = false;
+		return disponible;
+	}
 
 	@Override
 	public int hashCode() {
@@ -68,11 +73,11 @@ public class Reserva {
 		return Objects.equals(id, other.id);
 	}
 
-	public String getMesa() {
+	public Mesa getMesa() {
 		return mesa;
 	}
 
-	public void setMesa(String mesa) {
+	public void setMesa(Mesa mesa) {
 		this.mesa = mesa;
 	}
 
