@@ -1,16 +1,18 @@
 package com.example.reservasajedrez.exception;
 
+import org.springframework.http.HttpStatus;
+
 public class PlayerException extends RuntimeException {
 	
-	private static final long serialVersionUID = 1L;
+	private HttpStatus httpStatus;
 	
 	public PlayerException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public PlayerException(String message) {
+	public PlayerException(String message, HttpStatus httpStatus) {
 		super(message);
-		// TODO Auto-generated constructor stub
+		this.httpStatus = httpStatus;
 	}
 }

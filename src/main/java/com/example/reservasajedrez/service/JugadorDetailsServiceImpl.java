@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.example.reservasajedrez.repository.JugadorLoginRepository;
 import com.exemple.usuaris_sol.model.UserLogin;
 import com.exemple.usuaris_sol.repository.UserLoginRepository;
 
@@ -14,7 +15,7 @@ import com.exemple.usuaris_sol.repository.UserLoginRepository;
 public class JugadorDetailsServiceImpl {
 	
 	   @Autowired
-	   private UserLoginRepository repo;
+	   private JugadorLoginRepository repo;
 	   @Override
 	   public UserDetails loadUserByUsername(String username)
 	           throws UsernameNotFoundException {
