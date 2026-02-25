@@ -7,12 +7,12 @@ import javax.crypto.SecretKey;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.exemple.usuaris_sol.model.UserLogin.Role;
+import com.example.reservasajedrez.model.JugadorLogin.Role;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
-@Components
+@Component
 public class JwtUtil {
 	
 	@Value("${jwt.secret}")

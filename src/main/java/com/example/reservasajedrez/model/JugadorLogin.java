@@ -9,7 +9,13 @@ public class JugadorLogin{
 	private String id;
 	private String username;
 	private String password;
-
+	
+	private Role role;
+	
+	public enum Role {
+	    USER,
+	    ADMIN
+	}
 
 	public JugadorLogin() {
 	}
@@ -43,4 +49,14 @@ public class JugadorLogin{
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+	
+	
 }
