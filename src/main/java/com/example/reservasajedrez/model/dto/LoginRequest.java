@@ -1,8 +1,11 @@
 package com.example.reservasajedrez.model.dto;
 
+import com.example.reservasajedrez.model.Role;
+
 public class LoginRequest {
     private String username;
     private String password;
+    private Role role;
 
 
     public LoginRequest() {
@@ -22,5 +25,15 @@ public class LoginRequest {
 
     public void setPassword(String password) {
         this.password = password;
-    }    
+    }
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}    
+    
+    
 }

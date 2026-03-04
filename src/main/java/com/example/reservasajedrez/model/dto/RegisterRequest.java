@@ -1,5 +1,7 @@
 package com.example.reservasajedrez.model.dto;
 
+import com.example.reservasajedrez.model.Role;
+
 public class RegisterRequest {
 	private String username;
 	private String password;
@@ -9,13 +11,25 @@ public class RegisterRequest {
 	private String sexe;
 	private String nivell;
 	private String email;
+	private Role role;
 
 	public RegisterRequest() {
 	}
 
 	// Getters y setters
+	
+	
 	public String getNom() {
 		return nom;
+	}
+	
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public void setNom(String nom) {
@@ -61,4 +75,14 @@ public class RegisterRequest {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+	
+	
 }
