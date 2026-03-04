@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.reservasajedrez.model.JugadorLogin;
 import com.example.reservasajedrez.model.dto.LoginRequest;
-import com.example.reservasajedrez.model.dto.RegisterRequest;
 import com.example.reservasajedrez.repository.JugadorLoginRepository;
 import com.example.reservasajedrez.security.JwtUtil;
+
+
 
 @RestController
 @RequestMapping("/auth")
@@ -32,27 +32,16 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest request) {
+
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.getUsername(),
                         request.getPassword()
                 )
         );
-        String token = jwtUtil.generateToken(request.getUsername(), request.getRole());
+
+        String token = jwtUtil.generateToken(request.getUsername(),request.getRole());
         return ResponseEntity.ok(token);
     }
     
-    @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody RegisterRequest request) {
-        if (playerRepo.findByUsername(request.getUsername()).isPresent()) {
-            return ResponseEntity.badRequest()
-                    .body("Aquest usuari ja existeix");
-        }
-        JugadorLogin user = new JugadorLogin();
-        user.setUsername(request.getUsername());
-        user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setRole(request.getRole());
-        playerRepo.save(user);
-        return ResponseEntity.ok("Usuari registrat correctament");
-    }
- }
+}

@@ -12,10 +12,12 @@ import com.example.reservasajedrez.repository.JugadorRepository;
 @Service
 public class JugadorServiceImpl implements JugadorService {
 
-	@Autowired
-	JugadorRepository jugadorRepo;
+	private final JugadorRepository jugadorRepo;
 
-	public JugadorServiceImpl() {
+	@Autowired
+	public JugadorServiceImpl(JugadorRepository jugadorRepo) {
+		super();
+		this.jugadorRepo = jugadorRepo;
 	}
 
 	public String create(Jugador jugador) {
