@@ -23,14 +23,4 @@ public class ReservaController {
 		this.service = service;
 	}
 	
-	@PostMapping
-	public Reserva create(@RequestBody Reserva reserva) {
-		return service.create(reserva);
-	}
-	
-	@GetMapping("/{nif}")
-	public EntityResponse<Reserva> findByID(String id) {
-		return null;
-	}
-	
 }
