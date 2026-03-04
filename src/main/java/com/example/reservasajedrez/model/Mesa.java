@@ -7,12 +7,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Mesa {
 	@Id
 	private String id;
-	private boolean disponibilidad;
+	private boolean disponible;
 	
-	public Mesa(boolean disponibilidad) {
+	public Mesa(boolean disponible) {
 		super();
-		this.disponibilidad = disponibilidad;
+		this.disponible = disponible;
 	}
-	
+
+	public String getId() {
+		return id;
+	}
+
+	public boolean isDisponible() {
+		return disponible;
+	}
 	
 }

@@ -52,7 +52,7 @@ public class Reserva {
 	}
 	
 	private boolean comprobarMesa(Mesa mesa) {
-		boolean disponible = false;
+		boolean disponible = mesa.isDisponible();
 		return disponible;
 	}
 
