@@ -4,6 +4,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.example.reservasajedrez.model.JugadorLogin.Role;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Document(collection = "jugadors")

@@ -15,7 +15,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.example.reservasajedrez.model.JugadorLogin.Role;
-import com.example.reservasajedrez.security.JwtAuthenticationFilter;
 
 @Configuration
 @EnableMethodSecurity
