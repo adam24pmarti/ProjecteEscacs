@@ -18,7 +18,6 @@ import com.example.reservasajedrez.security.JwtUtil;
 
 @RestController
 @RequestMapping("/auth")
-
 public class AuthController {
 
     @Autowired

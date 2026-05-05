@@ -1,6 +1,6 @@
 package com.example.reservasajedrez.model.dto;
 
-import com.example.reservasajedrez.model.Role;
+import com.example.reservasajedrez.model.JugadorLogin.Role;
 
 public class RegisterRequest {
 	private String username;
